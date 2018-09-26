@@ -43,25 +43,7 @@
 			
 		}
 	</style>
-</head>
-<body>
-
-
-<div id="main">
-	
-
-
-
-
-
-
-
-
-
-
-</div>
-
-<script type="text/javascript">
+	<script type="text/javascript">
 
 
 	
@@ -112,33 +94,25 @@ function getId(){
 }
 getId();
 
-function onDeviceReady() {
-      document.removeEventListener('deviceready', onDeviceReady, false);
-      
-      // Set AdMobAds options:
-      admob.setOptions({
-        publisherId:          "pub-9297845572503342",  // Required
-        interstitialAdId:     "ca-app-pub-9297845572503342/9418672094",  // Optional
-        tappxIdiOS:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional
-        tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
-        tappxShare:           0.5                                        // Optional
-      });
-      
-      // Start showing banners (atomatic when autoShowBanner is set to true)
-      admob.createBannerView();
-      
-      // Request interstitial (will present automatically when autoShowInterstitial is set to true)
-      admob.requestInterstitialAd();
+function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
     }
-    
-    document.addEventListener("deviceready", onDeviceReady, false);
+	
+document.addEventListener("deviceready", onDeviceReady, false);
 
-
-
-
-
-
+function onDeviceReady() {
+    admob.initAdmob("ca-app-pub-9297845572503342/8453074787","admob interstitial ID");//admob id format ca-app-pub-xxxxxxxxxxxxxxxxxxx/xxxxxxxxxx
+	admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_APP);/
+}
 </script>
+</head>
+
+	
+<bodyon load="onLoad()">
+	<div id="main">
+	</div>
+
+
 
 </body>
 </html>
