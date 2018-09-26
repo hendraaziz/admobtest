@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+
+		*{
+		 font-family: "Gotham Rounded A","Gotham Rounded B",sans-serif;
+		}
+		.btnClass{
+			float: left;
+			cursor: pointer;
+			padding: 18px;
+			height: 60px;
+			width: 100%;
+			outline: none;
+			border: none;
+			
+			background: #8e9eab; 
+			font-size: 18px;
+   			background: -webkit-linear-gradient(#8e9eab, #eef2f3);  
+    		background: -o-linear-gradient(#8e9eab, #eef2f3); 
+    		background: -moz-linear-gradient(#8e9eab, #eef2f3); 
+   			background: linear-gradient(#8e9eab, #eef2f3); 
+		}
+
+
+		button:active{
+			background-color: blue;
+		}
+		.paragraph{
+				float: left;
+			height: auto;
+			width: 100%;
+			min-height: 50px;
+			
+			margin-bottom: 10px;
+			display: none;
+			
+			
+		}
+	</style>
+</head>
+<body>
+
+
+<div id="main">
+	
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<script type="text/javascript">
+
+
+	
+function createDiv(){
+
+for(var i=0; i <10; i++){
+
+	var title =["one", "two","three","four", "five", "six", "seven", "eight", "nine", "ten"];
+	var paraTitle=["pone","ptwo","pthree","pfour","pfive","psix","pseven","peight","pnine","pten"];
+	var contents = ["paragraph1", "paragraph2","paragraph3","paragraph4","paragraph5", "this is content","paragraph7"];
+
+
+	var div = document.createElement("button");
+	div.className="btnClass";
+	div.innerHTML = title[i];
+	div.id = title[i];
+	document.getElementById("main").appendChild(div);
+
+	var para = document.createElement("p");
+	para.className="paragraph";
+	para.innerHTML = contents[i];
+	para.id = paraTitle[i];
+	document.getElementById("main").appendChild(para);
+
+	}
+}
+createDiv();
+
+
+function getId(){
+	var buttons = document.getElementsByTagName("button");
+	var buttonsCount = buttons.length;
+	for(var i =0; i <= buttonsCount; i++){
+		buttons[i].onclick = function(){			
+			console.log(this.id);		
+			var name = this.id;
+			var x = document.getElementById("p" +  name);
+
+			if(x.style.display == "block"){
+				x.style.display = "none";
+			} else{
+				x.style.display = "block";
+			}
+
+		}
+	}
+	return name;
+}
+getId();
+
+function onDeviceReady() {
+      document.removeEventListener('deviceready', onDeviceReady, false);
+      
+      // Set AdMobAds options:
+      admob.setOptions({
+        publisherId:          "pub-9297845572503342",  // Required
+        interstitialAdId:     "ca-app-pub-9297845572503342/9418672094",  // Optional
+        tappxIdiOS:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional
+        tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
+        tappxShare:           0.5                                        // Optional
+      });
+      
+      // Start showing banners (atomatic when autoShowBanner is set to true)
+      admob.createBannerView();
+      
+      // Request interstitial (will present automatically when autoShowInterstitial is set to true)
+      admob.requestInterstitialAd();
+    }
+    
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.admobtest.admob.admob" version="1.0.1" versionCode = "10" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+
+<!-- versionCode is optional and Android only -->
+
+  <name>admobtest</name>
+
+  <description>
+      
+  </description>
+
+  <author href="http://www.clinicalpharmacytraining.co.uk" email="clinicalpharmacytraining@gmail.com">
+       Clinical Pharmacy
+  </author>
+
+   
+   <content src="index.html"></content>
+
+   <preference name="phonegap-version" value="cli-8.0.0" />
+   <gap:plugin name="phonegap-admob" source="npm"/>
+</widget>
