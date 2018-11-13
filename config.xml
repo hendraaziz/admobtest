@@ -13,7 +13,7 @@
   <author href="http://www.clinicalpharmacytraining.co.uk" email="clinicalpharmacytraining@gmail.com">
        Clinical Pharmacy
   </author>
-  <gap:plugin name="com.admob.plugin" version="3.0.0" source="plugins.cordova.io" />
+  <gap:plugin name="com-admob-plugin" version="5.3.1" source="npm"/>
    <content src="index.html"></content>
    <preference name="phonegap-version" value="cli-8.0.0" />
 </widget>
