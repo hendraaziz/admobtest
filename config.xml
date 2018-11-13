@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.pharmacist.interview" version="1.0.1" versionCode = "10" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.pharmacist.interview" version="2.0.1" versionCode = "10" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
 
 <!-- versionCode is optional and Android only -->
 
-  <name>Pharmacist Interview</name>
+  <name>AdmobTEst</name>
 
   <description>
       An app containing a wide variety of interview questions aimed at pharmacists in different sectors
@@ -13,7 +13,7 @@
   <author href="http://www.clinicalpharmacytraining.co.uk" email="clinicalpharmacytraining@gmail.com">
        Clinical Pharmacy
   </author>
-
+  <gap:plugin name="com.admob.plugin" version="3.0.0" source="plugins.cordova.io" />
    <content src="index.html"></content>
    <preference name="phonegap-version" value="cli-8.0.0" />
 </widget>
