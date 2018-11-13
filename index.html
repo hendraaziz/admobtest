@@ -1,118 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-	</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<style type="text/css">
-
-		*{
-		 font-family: "Gotham Rounded A","Gotham Rounded B",sans-serif;
-		}
-		.btnClass{
-			float: left;
-			cursor: pointer;
-			padding: 18px;
-			height: 60px;
-			width: 100%;
-			outline: none;
-			border: none;
-			
-			background: #8e9eab; 
-			font-size: 18px;
-   			background: -webkit-linear-gradient(#8e9eab, #eef2f3);  
-    		background: -o-linear-gradient(#8e9eab, #eef2f3); 
-    		background: -moz-linear-gradient(#8e9eab, #eef2f3); 
-   			background: linear-gradient(#8e9eab, #eef2f3); 
-		}
-
-
-		button:active{
-			background-color: blue;
-		}
-		.paragraph{
-				float: left;
-			height: auto;
-			width: 100%;
-			min-height: 50px;
-			
-			margin-bottom: 10px;
-			display: none;
-			
-			
-		}
-	</style>
-	<script type="text/javascript">
-
-
-	
-function createDiv(){
-
-for(var i=0; i <10; i++){
-
-	var title =["one", "two","three","four", "five", "six", "seven", "eight", "nine", "ten"];
-	var paraTitle=["pone","ptwo","pthree","pfour","pfive","psix","pseven","peight","pnine","pten"];
-	var contents = ["paragraph1", "paragraph2","paragraph3","paragraph4","paragraph5", "this is content","paragraph7"];
-
-
-	var div = document.createElement("button");
-	div.className="btnClass";
-	div.innerHTML = title[i];
-	div.id = title[i];
-	document.getElementById("main").appendChild(div);
-
-	var para = document.createElement("p");
-	para.className="paragraph";
-	para.innerHTML = contents[i];
-	para.id = paraTitle[i];
-	document.getElementById("main").appendChild(para);
-
-	}
-}
-createDiv();
-
-
-function getId(){
-	var buttons = document.getElementsByTagName("button");
-	var buttonsCount = buttons.length;
-	for(var i =0; i <= buttonsCount; i++){
-		buttons[i].onclick = function(){			
-			console.log(this.id);		
-			var name = this.id;
-			var x = document.getElementById("p" +  name);
-
-			if(x.style.display == "block"){
-				x.style.display = "none";
-			} else{
-				x.style.display = "block";
-			}
-
-		}
-	}
-	return name;
-}
-getId();
-
-function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
-	
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-    admob.initAdmob("ca-app-pub-9297845572503342/8453074787","admob interstitial ID");//admob id format ca-app-pub-xxxxxxxxxxxxxxxxxxx/xxxxxxxxxx
-	admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_APP);/
-}
-</script>
+	<title></title>
 </head>
+<body>
 
-	
-<bodyon load="onLoad()">
-	<div id="main">
-	</div>
+	<script type="text/javascript">
+		
+		function  onDeviceReady(){
+			admob.initAdmob("ca-app-pub-3940256099942544/6300978111","ca-app-pub-3940256099942544/1033173712");
+			admob.showBanner(admob.BannerSize.BANNER, admob.Position.BOTTOM_APP);
+		}
+		document.addEventListener('deviceready', onDeviceReady, false);
+	</script>
 
-
-
+	<h1>Hello World</h1>
 </body>
 </html>
