@@ -16,7 +16,7 @@
   
    <content src="index.html"></content>
    <preference name="phonegap-version" value="cli-8.0.0" />
-  <plugin name="cordova-admob-pro" source="npm">
+  <plugin name="cordova-plugin-admob" source="npm">
   <variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
   </plugin>
 </widget>
